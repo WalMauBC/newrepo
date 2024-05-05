@@ -1,6 +1,91 @@
 /******* Change Box Model ***************/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
+/* Your existing CSS */
+body {
+ 
+  background-image: url("/images/site/small_check.jpg");
+  
+  font-family: "PT Serif", serif;
+  
+}
+
+.body {
+  background-color: white;
+  margin: 4rem;
+  border: 5px solid rgb(41, 211, 211); /* Grosor del borde, estilo y color */
+  border-radius: 1rem;  
+}
+
+.orderAdv, .welcomeCar {
+  position: absolute;
+}
+
+.orderAdv {
+  width: 10rem;
+  height: 15rem;
+  padding: 12px;
+  background-color:rgb(41, 211, 211);
+  margin-top: 150px;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.orderBtn {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(41, 211, 211);
+}
+
+footer {
+  bottom: -30px;
+  position: relative;
+  }
+
+.upgrades, .reviews {
+  display: inline-grid;
+  margin-top: 380px;
+  max-width: 345px;
+  padding: 20px;
+}
+
+.upgrade1, .upgrade2 {
+  max-width: 265px;
+  display: inline-flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.upgrades img{
+  width: 100px;
+  background-color: aliceblue;
+}
+
+
+.orderAdv {
+  color: rgb(41, 211, 211);
+  width: 10rem;
+  height: 15rem;
+  padding: 12px;
+  background-color:rgb(255, 255, 255);
+  margin-top: 150px;
+  margin-left: 20px;
+  opacity: 0.75;
+}
+
+.orderBtn {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(41, 211, 211);
+}
+
+
+
+
+/* styles.css */
+
