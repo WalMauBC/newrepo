@@ -1,5 +1,5 @@
-    /* ******************************************
-    * This server.js file is the primary file of the 
+/* ******************************************
+    * This server.js file is the primary file of the
     * application. It is used to control the project.
     *******************************************/
     /* ***********************
@@ -16,9 +16,10 @@
     * View Engine Templates
     *************************/
     app.set("view engine", "ejs")
-    app.use(express.static("public"))
+      app.use(expressLayouts)
+    //app.use(express.static("public"))
     app.set("layout", "./layouts/layout") // not at views root
-    app.set("patials", "./partials/navigation")
+    //app.set("patials", "./partials/navigation")
 
     /* ***********************
     * Routes*************************/
@@ -27,8 +28,6 @@
     app.get("/", function(req, res){
       res.render("index", {title: "home"})
     })
-    
-
 
     /* ***********************
     * Local Server Information

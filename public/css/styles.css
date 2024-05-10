@@ -6,25 +6,75 @@
   box-sizing: border-box;
 }
 
-/* Your existing CSS */
 body {
- 
   background-image: url("/images/site/small_check.jpg");
-  
+  background-repeat: repeat;
   font-family: "PT Serif", serif;
-  
 }
 
-.body {
+#wrapper {
   background-color: white;
-  margin: 4rem;
-  border: 5px solid rgb(41, 211, 211); /* Grosor del borde, estilo y color */
-  border-radius: 1rem;  
+  border-color: rgb(41, 211, 211);
+  border-width: .50rem;
+  border-style: solid;
+  border-radius: 2rem;
+  height: 53rem;
+  width: 45rem;
+  margin: auto;
+  padding: 12px;
+}
+
+#top-header {
+  display: flex; /* Use Flexbox */
+  justify-content: space-between; /* Place items at the start and end of the container */
+}
+
+.siteName, .account {
+  display: flex; /* Use Flexbox for child elements */
+  align-items: center; /* Align items vertically */
+}
+
+.siteName {
+  margin-right: auto; /* Pushes .siteName to the start of the container */
+  font-size: x-large;
+  color: black;
+  text-decoration: none;
+}
+
+.account {
+  margin-left: auto; /* Pushes .account to the end of the container */
+}
+
+/* Set color of links to black */
+.siteName a,
+.account {
+  color: black;
+  text-decoration: none; /* Optional: Remove underline from links */
 }
 
 .orderAdv, .welcomeCar {
   position: absolute;
 }
+
+.nav-item, nav-link{
+  color: #fff;
+}
+
+nav {
+  max-width: 100%;
+  background-color: black;
+  height: 25px;
+  
+  
+}
+
+nav ul li {
+  display: inline-block;
+  width: 7rem;
+  text-align: center;
+  
+}
+
 
 .orderAdv {
   width: 10rem;
@@ -84,8 +134,119 @@ footer {
   background-color: rgb(41, 211, 211);
 }
 
+@media only screen and (max-width: 600px) {
 
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  *,
+  *:before,
+  *:after {
+  box-sizing: border-box;
+  }
 
+  body {
+  background-image: url("/images/site/small_check.jpg");
+  background-repeat: repeat;
+  font-family: "PT Serif", serif;
+  }
 
-/* styles.css */
+  .welcomeCar img{
+      width: 350px;
+  }
 
+  #wrapper {
+  border-width: .50rem;
+  border-style: solid;
+  border-radius: 2rem;
+  height: 68rem;
+  width: 27rem;
+  margin: auto;
+  padding: 12px;
+  }
+
+  #top-header {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Place items at the start and end of the container */
+  }
+  
+  .siteName, .account {
+    display: flex; /* Use Flexbox for child elements */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .siteName {
+    margin-right: auto; /* Pushes .siteName to the start of the container */
+    font-size: x-large;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .account {
+    margin-left: auto; /* Pushes .account to the end of the container */
+  }
+  
+  /* Set color of links to black */
+  .siteName a,
+  .account {
+    color: black;
+    text-decoration: none; /* Optional: Remove underline from links */
+  }
+
+  nav {
+  max-width: 100%;
+  background-color: black;
+  height: 26px;
+  }
+
+  nav ul li {
+  display: inline-block;
+  width: 3.75rem;
+  text-align: center;
+  color: white;
+  }
+
+  .orderAdv, .welcomeCar {
+  position: absolute;
+  }
+
+  .orderAdv {
+  width: 10rem;
+  height: 13.5rem;
+  padding: 10px;
+  line-height: 1;
+  background-color:white;
+  margin-top: 120px;
+  margin-left: 20px;
+  opacity: 0.85;
+  }
+
+  .orderBtn {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(41, 211, 211);
+  }
+
+  footer {
+  bottom: 25px;
+  position: relative;
+  }
+
+  .upgrades, .reviews {
+  max-width: 345px;
+  padding: 20px;
+  }
+
+  .reviews {
+      margin-top: -10px;
+  }
+
+  .upgrade1, .upgrade2 {
+  max-width: 265px;
+  gap: 15px;
+  padding: 10px;
+  }
+
+  .upgrades img{
+  width: 50px;
+  }
+
+}
