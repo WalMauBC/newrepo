@@ -93,9 +93,12 @@ nav ul li {
 }
 
 footer {
-  bottom: -30px;
+  bottom: 10px;
   position: relative;
+  color: black;
   }
+  
+
 
 .upgrades, .reviews {
   display: inline-grid;
@@ -133,6 +136,10 @@ footer {
   height: 30px;
   background-color: rgb(41, 211, 211);
 }
+
+
+
+
 
 @media only screen and (max-width: 600px) {
 
