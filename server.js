@@ -12,7 +12,7 @@
     const static = require("./routes/static")
     const baseController = require("./controllers/baseController")
     const intentionalErrorRoute = require('./routes/intentionalErrorRoute')
-    const utilities = require("./utilities/")
+    const utilities = require("./utilities")
     const inventoryRoute = require("./routes/inventoryRoute")
     
     
@@ -33,46 +33,23 @@
     
 
     /* ***********************
-    * Routes*************************/
-    app.use(static);
-    app.use(require("./routes/static"))
-    app.get("/", utilities.handleErrors(baseController.buildHome)) 
-    app.use("/inv", inventoryRoute)
-    app.use("/", intentionalErrorRoute) 
-    // File Not Found Route - must be last route in list
-    app.use(async (req, res, next) => {
-      next({status: 404, message: 'Sorry, we appear to have lost that page.'})
-})
+    * Routes
+    *************************/
+   app.use(static)
+
+   // Index route
+   app.get("/", utilities.handleErrors(baseController.buildHome))
+   
+   // Inventory routes
+   app.use("/inv", inventoryRoute)
+   
+   // File Not Found Route - must be last route in list
+   app.use(async (req, res, next) => {
+    next({status: 404, message: 'Sorry, we appear to have lost that page.'})
+  })
+
     
-    // Index route
-    //app.get("/", function(req, res){
-    //  res.render("index", {title: "home"})
-    //})
-    app.use(static);
-    // index route
-    app.get("/", utilities.handleErrors(baseController.buildHome));
-    app.get("/", baseController.buildHome)
-
-    // Inventory routes
-    app.use("/inv", inventoryRoute);
-
-    // Intentional error route
-    app.use("/", intentionalErrorRoute);
-    
-    
-
-    // File Not Found Route - must be last route in list
-    app.use(async (req, res, next) => {
-       next({status: 404, message: 'Sorry, we appear to have lost that page.'})
-    })
-
-    app.use(async (err, req, res, next) => {
-      res.status(500).render('errors/error', {
-        title: 'Server Error',
-        message: err.message,
-      });
-    });
-
+   
 
     
 
